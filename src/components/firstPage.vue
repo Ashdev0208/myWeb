@@ -110,7 +110,7 @@ let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
 datas.forEach(el => {
-    arr.value.push(new URL(el.banner.img, import.meta.url));
+    arr.value.push(el.banner.img);
 })
 
 let name = (name) => {
