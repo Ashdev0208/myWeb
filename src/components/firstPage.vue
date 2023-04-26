@@ -11,18 +11,18 @@
                         <div class="slideItem rel">
 
                             <div class="part">
-                                <div class="season" v-if="datas[slide].banner.season
-                                    ">{{ datas[slide].banner.season }}<br>season</div>
-                                <div class="part-number" v-if="datas[slide].banner.partNumber">{{
-                                    datas[slide].banner.partNumber
+                                <div class="season" v-if="server[slide].banner.season
+                                    ">{{ server[slide].banner.season }}<br>season</div>
+                                <div class="part-number" v-if="server[slide].banner.partNumber">{{
+                                    server[slide].banner.partNumber
                                 }}<br>seriya</div>
                             </div>
                             <div class="overflow">
                                 <img class="contain imgBlur" :src="array.href" alt="">
                             </div>
                             <div class="movie-title">
-                                <div class="title">{{ datas[slide].banner.title }}</div>
-                                <div class="text">{{ datas[slide].banner.movieType }}</div>
+                                <div class="title">{{ server[slide].banner.title }}</div>
+                                <div class="text">{{ server[slide].banner.movieType }}</div>
                             </div>
                             <button class="btn imgBtn">ko'ramiz</button>
                         </div>
@@ -83,7 +83,9 @@
                 </Carousel>
             </section>
             <br><br>
+
             <Footer></Footer>
+
         </div>
 
 
@@ -97,25 +99,23 @@
 
 <script setup>
 import { ref, onMounted } from "vue"
-import datas from '../server/server.json';
+import server from '../reusable/index.js';
 import Nav from "./nav.vue"
 import 'vue3-carousel/dist/carousel.css';
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 let length = ref(['serial', 'film', "anime", "multfilm"])
-let arr = ref([]);
 let anime = ref([]);
 let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
-datas.forEach(el => {
-    arr.value.push(new URL(el.banner.img, import.meta.url));
+let arr = ref([]);
+
+server.forEach(item => {
+    arr.value.push(new URL(item.banner.img, import.meta.url))
 })
 
-let name = (name) => {
-    return new URL(name.banner.img, import.meta.url)
-}
 
 let num = (num) => {
     if (num >= 4) {
@@ -130,28 +130,34 @@ let num = (num) => {
     }
 }
 
-serial.value = datas.filter((a) => {
+serial.value = server.filter((a) => {
     if (a.banner.movieType == "serial") {
         return a
     }
 })
 
-anime.value = datas.filter((a) => {
+anime.value = server.filter((a) => {
     if (a.banner.movieType == "anime") {
         return a
     }
 })
 
-film.value = datas.filter((a) => {
+film.value = server.filter((a) => {
     if (a.banner.movieType == "film") {
         return a
     }
 })
-cartoon.value = datas.filter((a) => {
+cartoon.value = server.filter((a) => {
     if (a.banner.movieType == "cartoon") {
         return a
     }
 });
+
+
+function name(argument) {
+    return new URL(argument.banner.img, import.meta.url)
+}
+
 
 let lengthItem = ref([serial.value, film.value, anime.value, cartoon.value])
 
