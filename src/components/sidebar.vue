@@ -11,7 +11,7 @@
                 <routerLink to="/">bosh sahifa</routerLink>
             </li>
             <li>
-                <routerLink :images = 'images' :to="{ name: 'lists', params: { type: 'film' } }">filmlar</routerLink>
+                <routerLink :to="{ name: 'lists', params: { type: 'film' } }">filmlar</routerLink>
             </li>
             <li>
                 <routerLink :to="{ name: 'lists', params: { type: 'serial' } }">serial</routerLink>
