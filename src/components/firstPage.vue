@@ -18,7 +18,7 @@
                                 }}<br>seriya</div>
                             </div>
                             <div class="overflow">
-                                <img class="contain imgBlur" :src="array" alt="">
+                                <img class="contain imgBlur" :src="array.href" alt="">
                             </div>
                             <div class="movie-title">
                                 <div class="title">{{ datas[slide].banner.title }}</div>
@@ -110,7 +110,7 @@ let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
 datas.forEach(el => {
-    arr.value.push(el.banner.img);
+    arr.value.push(new URL(el.banner.img, import.meta.url));
 })
 
 let name = (name) => {

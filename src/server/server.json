@@ -2,7 +2,7 @@
     {
         "id": 1,
         "banner": {
-            "img": "/assets/banner.jpg",
+            "img": "../assets/banner.jpg",
             "src": "//ok.ru/videoembed/1914646039083",
             "type": [
                 "jangari",
@@ -18,7 +18,7 @@
     {
         "id": 2,
         "banner": {
-            "img": "/assets/banner2.jpg",
+            "img": "https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_2x_r5.pngg",
             "src": "//ok.ru/videoembed/1473817283119",
             "type": [
                 "jangari",
@@ -34,7 +34,7 @@
     {
         "id": 3,
         "banner": {
-            "img": "/assets/anime.jpg",
+            "img": "../assets/anime.jpg",
             "src": "//ok.ru/videoembed/2005864131",
             "type": [
                 "jangari",
@@ -49,7 +49,7 @@
     {
         "id": 4,
         "banner": {
-            "img": "/assets/supergirl.jpg",
+            "img": "../assets/supergirl.jpg",
             "src": "//ok.ru/videoembed/928574474874",
             "type": [
                 "jangari",
