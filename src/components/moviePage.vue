@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import datas from '../server/server.json';
+
 </script>
 
 <style scoped></style>

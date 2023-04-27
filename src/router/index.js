@@ -8,7 +8,7 @@ const routes = [
     {
         path: '/lists/:type',
         name: "lists",
-        component: ()=>import('../components/listsPage.vue')
+        component: ()=>import('../components/listsPage.vue'),
     },
     {
         path: '/movie/:id',

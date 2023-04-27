@@ -43,6 +43,33 @@ section {
   color: #fff;
 }
 
+.directory {
+  padding: 10px;
+  background: rgb(69, 69, 69);
+  font-size: 15px;
+  font-family: 'Poppins', sans-serif;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.btn.pagination__button {
+  background: none;
+  outline: 2px solid transparent;
+  border: 2px solid rgb(80 80 80 / 65%);
+  padding: 8px 25px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 1px 30px rgba(80, 80, 80, 0.483);
+  transition: .6s ease all;
+  font-size: 15px;
+}
+
+.btn.pagination__button:hover {
+  outline-offset: .6px;
+  outline-color: rgb(80 80 80 / 65%);
+}
+
 .title h1,
 .title h2,
 .title h3,
