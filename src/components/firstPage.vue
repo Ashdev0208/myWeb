@@ -18,7 +18,7 @@
                                 }}<br>seriya</div>
                             </div>
                             <div class="overflow">
-                                <img class="contain imgBlur" :src="array" alt="">
+                                <img class="contain imgBlur" :src="array.href" alt="">
                             </div>
                             <div class="movie-title">
                                 <div class="title">{{ server[slide].banner.title }}</div>

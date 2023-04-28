@@ -57,7 +57,7 @@ import Footer from './footer.vue'
 let val = ref(Math.round(Math.random() * datas.length))
 let random = ref(new URL(datas[val.value].banner.img, import.meta.url));
 let arr = ref(useRoute().fullPath.split('/'));
-watchEffect(()=>{
+watchEffect(() => {
     console.log(useRoute());
 })
 if (arr.value[0] == "") {
@@ -67,7 +67,6 @@ if (arr.value[0] == "") {
 if (arr.value[1] == "lists") {
     arr.value.splice(1, 1);
 }
-console.log(arr.value);
 onMounted(() => {
     const navBar = document.querySelector('.menu .title');
     const sideBar = document.querySelector('.sidebar');
@@ -82,6 +81,7 @@ onMounted(() => {
         }
     })
 })
+
 
 
 

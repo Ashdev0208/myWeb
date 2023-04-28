@@ -1,5 +1,4 @@
 
-
 const server = [
     {
         id: 1,
@@ -39,7 +38,7 @@ const server = [
     {
         id: 4,
         banner: {
-            img: '../assets/supergirl.jpg',
+            img: '',
             src: '//ok.ru/videoembed/928574474874',
             type: ["droma", "kulgili"],
             season: 1,
