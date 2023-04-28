@@ -18,7 +18,7 @@
                                 }}<br>seriya</div>
                             </div>
                             <div class="overflow">
-                                <img class="contain imgBlur" :src="array.href" alt="">
+                                <img class="contain imgBlur" :src="server[slide].banner.img" alt="">
                             </div>
                             <div class="movie-title">
                                 <div class="title">{{ server[slide].banner.title }}</div>
@@ -111,11 +111,6 @@ let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
 let arr = ref([]);
-
-server.forEach(item => {
-    arr.value.push(new URL(item.banner.img, import.meta.url))
-})
-
 
 let num = (num) => {
     if (num >= 4) {

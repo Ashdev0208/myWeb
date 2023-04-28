@@ -3,7 +3,7 @@ const server = [
     {
         id: 1,
         banner: {
-            img: '../assets/banner.jpg',
+            img: new URL('../assets/banner.jpg', import.meta.url),
             src: '//ok.ru/videoembed/1914646039083',
             type: ["droma", "kulgili"],
             season: 3,
@@ -15,7 +15,7 @@ const server = [
     {
         id: 2,
         banner: {
-            img: '../assets/banner2.jpg',
+            img: new URL('../assets/banner2.jpg', import.meta.url),
             src: '//ok.ru/videoembed/1473817283119',
             type: ["droma", "kulgili"],
             season: 3,
@@ -27,7 +27,7 @@ const server = [
     {
         id: 3,
         banner: {
-            img: '../assets/anime.jpg',
+            img: new URL('../assets/anime.jpg', import.meta.url),
             src: '//ok.ru/videoembed/2005864131',
             type: ["droma", "kulgili"],
             partNumber: 1,
@@ -38,7 +38,7 @@ const server = [
     {
         id: 4,
         banner: {
-            img: '',
+            img: new URL('../assets/supergirl.jpg', import.meta.url),
             src: '//ok.ru/videoembed/928574474874',
             type: ["droma", "kulgili"],
             season: 1,
