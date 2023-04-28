@@ -6,7 +6,7 @@
         <div class="container">
             <Nav></Nav>
             <Carousel :autoplay="3000" :wrap-around="true" :items-to-show="1.5" :breakpoints="CarouselSetting.breakpoints">
-                <Slide v-for="(array, slide) in arr" :key="slide">
+                <Slide v-for="(array, slide) in server" :key="slide">
                     <div class="carousel__item">
                         <div class="slideItem rel">
 
@@ -110,7 +110,8 @@ let anime = ref([]);
 let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
-let arr = ref([]);
+
+
 
 let num = (num) => {
     if (num >= 4) {
