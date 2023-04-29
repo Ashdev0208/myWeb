@@ -2,6 +2,9 @@
     <div class="row">
         <div class="side">
             <sidebar></sidebar>
+            <div @click="route().modal = false" class="closeModal">
+
+            </div>
         </div>
         <div class="container">
             <Nav></Nav>
@@ -9,8 +12,12 @@
 
             <div class="row ai-c js-b">
                 <div class="pages row ">
-                    <div class="title row ai-c" v-for="text in arr">
-                        <span class="directory">{{ text }}</span>
+                    <div class="title row ai-c">
+                        <span class="directory">home</span>
+                        <span class="text">
+                            >
+                        </span>
+                        <span class="directory">{{ route().routeName }}</span>
                         <span class="text">
                             >
                         </span>
@@ -20,7 +27,7 @@
                     Aems Studios
                 </div>
             </div>
-            <!-- <section class="content">
+            <section class="content">
                 <div class="slideItem rel">
                     <div class="part">
                         <div class="season"><br>season</div>
@@ -35,7 +42,7 @@
                         1
                     </button>
                 </div>
-            </section> -->
+            </section>
             <section>
                 <Footer></Footer>
             </section>
@@ -43,49 +50,22 @@
         </div>
     </div>
     <div class="bg-blur">
-        <img :src="random" alt="">
+        <img :src="datas[val].banner.img" alt="">
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted, watchEffect, onUpdated } from "vue"
-import { useRoute } from "vue-router"
+import { route } from "../store/store.js"
+import { ref, watchEffect } from "vue"
 import datas from '../reusable/index.js';
 import Nav from "./nav.vue"
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
 let val = ref(Math.round(Math.random() * datas.length))
-let random = ref(new URL(datas[val.value].banner.img, import.meta.url));
-let arr = ref(useRoute().fullPath.split('/'));
 watchEffect(() => {
-    console.log(useRoute());
+    console.log(route().routeName);
+    val.value = Math.round(Math.random() * datas.length)
 })
-if (arr.value[0] == "") {
-    arr.value[0] = "Home"
-}
-
-if (arr.value[1] == "lists") {
-    arr.value.splice(1, 1);
-}
-onMounted(() => {
-    const navBar = document.querySelector('.menu .title');
-    const sideBar = document.querySelector('.sidebar');
-
-    navBar.addEventListener('click', () => {
-        sideBar.classList.add('active');
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target == sideBar) {
-            sideBar.classList.remove('active')
-        }
-    })
-})
-
-
-
-
-
 </script>
 
 <style scoped></style>

@@ -1,13 +1,40 @@
-<template>
-  <div>
-    <RouterView></RouterView>
-  </div>
-</template>
 
 <script setup>
 
+
+
 </script>
 
-<style lang="scss" scoped>
+<template>
 
+  <div>
+    <router-view v-slot="{ Component, route }">
+      <transition name="slide-fade" mode="out-in" :duration="{ enter: 400, leave: 500 }">
+        <div :key="route.name">
+          <component :is="Component"></component>
+        </div>
+      </transition>
+    </router-view>
+  </div>
+</template>
+
+
+<style scoped>
+.slide-fade-enter-active {
+  transition: all .4s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from {
+  transform: translateX(-150px);
+  opacity: 0;
+}
+
+.slide-fade-leave-to {
+  transform: translateX(150px);
+  opacity: 0;
+}
 </style>

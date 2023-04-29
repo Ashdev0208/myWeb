@@ -1,10 +1,10 @@
 <script setup>
-
+import { route } from "../store/store.js"
 </script>
 
 
 <template>
-    <nav class="sidebar">
+    <nav class="sidebar" :class="{active: route().modal}">
         <ul>
             <li>
                 <div class="close-side">Menu</div>
@@ -13,19 +13,26 @@
                 <routerLink to="/">bosh sahifa</routerLink>
             </li>
             <li>
-                <routerLink :to="{ name: 'lists', params: { type: 'film' } }">filmlar</routerLink>
+                <routerLink @click="route().routeName = 'film'" :to="{ name: 'lists', params: { type: 'film' } }">filmlar
+                </routerLink>
             </li>
             <li>
-                <routerLink :to="{ name: 'lists', params: { type: 'serial' } }">serial</routerLink>
+                <routerLink @click="route().routeName = 'serial'" :to="{ name: 'lists', params: { type: 'serial' } }">
+                    serial
+                </routerLink>
             </li>
             <li>
-                <routerLink :to="{ name: 'lists', params: { type: 'cartoon' } }">multfilm</routerLink>
+                <routerLink @click="route().routeName = 'multfilm'" :to="{ name: 'lists', params: { type: 'cartoon' } }">
+                    multfilm</routerLink>
             </li>
             <li class="underline">
-                <routerLink :to="{ name: 'lists', params: { type: 'anime' } }">anime</routerLink>
+                <routerLink @click="route().routeName = 'anime'" :to="{ name: 'lists', params: { type: 'anime' } }">anime
+                </routerLink>
             </li>
             <li>
-                <routerLink :to="{ name: 'lists', params: { type: '1' } }">multiqidiruv</routerLink>
+                <routerLink @click="route().routeName = 'multiSearch'"
+                    :to="{ name: 'lists', params: { type: 'multiSearch' } }">multiqidiruv
+                </routerLink>
             </li>
         </ul>
     </nav>
@@ -50,6 +57,7 @@
     display: flex;
     justify-content: center;
     z-index: 1;
+    z-index: 5;
 }
 </style>
 

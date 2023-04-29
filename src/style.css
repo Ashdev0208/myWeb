@@ -54,6 +54,18 @@ section {
   text-transform: capitalize;
 }
 
+
+.closeModal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  background: #00000037;
+  backdrop-filter: blur(10px);
+  z-index: 4;
+  display: none;
+}
+
 .btn.pagination__button {
   background: none;
   outline: 2px solid transparent;
@@ -256,14 +268,8 @@ ul li {
     width: 150px !important;
   }
 
-  .sidebar::after {
-    position: absolute;
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    background: #0000002b;
-    z-index: -1;
+  .sidebar.active~.closeModal {
+    display: block;
   }
 
   .sidebar.active {

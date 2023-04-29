@@ -2,6 +2,9 @@
     <div class="row">
         <div class="side">
             <sidebar></sidebar>
+            <div @click="route().modal = false" class="closeModal">
+
+            </div>
         </div>
         <div class="container">
             <Nav></Nav>
@@ -63,7 +66,7 @@
                                         film.banner.partNumber
                                     }}<br>seriya</div>
                                 </div>
-                                <div class="img overflow "><img class="contain imgBlur" :src="name(film)" alt=""></div>
+                                <div class="img overflow "><img class="contain imgBlur" :src="film.banner.img" alt=""></div>
                                 <div class="title">{{ film.banner.title }}</div>
                                 <button class="btn imgBtn">ko'ramiz</button>
                             </div>
@@ -84,6 +87,10 @@
             </section>
             <br><br>
 
+            <div class="title">
+                hello
+            </div>
+
             <Footer></Footer>
 
         </div>
@@ -98,19 +105,19 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue"
+import { ref } from "vue"
 import server from '../reusable/index.js';
 import Nav from "./nav.vue"
 import 'vue3-carousel/dist/carousel.css';
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import { route } from "../store/store";
 let length = ref(['serial', 'film', "anime", "multfilm"])
 let anime = ref([]);
 let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
-
 
 
 let num = (num) => {
@@ -149,36 +156,12 @@ cartoon.value = server.filter((a) => {
     }
 });
 
-
-function name(argument) {
-    return new URL(argument.banner.img, import.meta.url)
-}
-
-
 let lengthItem = ref([serial.value, film.value, anime.value, cartoon.value])
-
-onMounted(() => {
-    const navBar = document.querySelector('.menu .title');
-    const sideBar = document.querySelector('.sidebar');
-
-    navBar.addEventListener('click', () => {
-        sideBar.classList.add('active');
-    });
-
-    window.addEventListener('click', (e) => {
-        if (e.target == sideBar) {
-            sideBar.classList.remove('active')
-        }
-    })
-})
-
 let CarouselSetting = ref({
     settings: {
         itemsToShow: 1,
         snapAlign: 'center',
     },
-    // breakpoints are mobile first
-    // any settings not specified will fallback to the carousel settings
     breakpoints: {
         768: {
             // itemsToShow: 1,

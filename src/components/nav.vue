@@ -9,24 +9,25 @@
                 <button class="icon">🔎</button>
             </div>
             <div class="menu">
-                <div class="title">Menu</div>
+                <div @click="route().modal = true" class="title">Menu</div>
             </div>
         </nav>
     </div>
 </template>
 
 <script setup>
-    
+import { route } from '../store/store'; 
+
+
 </script>
 
 <style scoped>
-
 nav {
     padding: 20px 0;
     width: 100%;
 }
 
-.logo a{
+.logo a {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
@@ -37,11 +38,11 @@ nav {
     position: relative;
 }
 
-.icon{
+.icon {
     position: absolute;
     right: 12%;
     top: 50%;
-    transform: translate(0%,-50%);
+    transform: translate(0%, -50%);
     background: none;
     border: none;
     outline: none;
@@ -68,11 +69,11 @@ nav {
     outline-color: rgb(80 80 80 / 65%);
 }
 
-.menu{
+.menu {
     cursor: pointer;
 }
 
-.sidebar.active{
+.sidebar.active {
     left: 100%;
 }
 </style>
