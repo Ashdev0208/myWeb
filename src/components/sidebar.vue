@@ -1,10 +1,11 @@
 <script setup>
 import { route } from "../store/store.js"
+
 </script>
 
 
 <template>
-    <nav class="sidebar" :class="{active: route().modal}">
+    <nav class="sidebar" :class="{ active: route().modal }">
         <ul>
             <li>
                 <div class="close-side">Menu</div>
@@ -13,24 +14,28 @@ import { route } from "../store/store.js"
                 <routerLink to="/">bosh sahifa</routerLink>
             </li>
             <li>
-                <routerLink @click="route().routeName = 'film'" :to="{ name: 'lists', params: { type: 'film' } }">filmlar
+                <routerLink @click="route().routeName = 'film', route().modal = false"
+                    :to="{ name: 'lists', params: { type: 'film' } }">filmlar
                 </routerLink>
             </li>
             <li>
-                <routerLink @click="route().routeName = 'serial'" :to="{ name: 'lists', params: { type: 'serial' } }">
+                <routerLink @click="route().routeName = 'serial', route().modal = false"
+                    :to="{ name: 'lists', params: { type: 'serial' } }">
                     serial
                 </routerLink>
             </li>
             <li>
-                <routerLink @click="route().routeName = 'multfilm'" :to="{ name: 'lists', params: { type: 'cartoon' } }">
+                <routerLink @click="route().routeName = 'multfilm', route().modal = false"
+                    :to="{ name: 'lists', params: { type: 'cartoon' } }">
                     multfilm</routerLink>
             </li>
             <li class="underline">
-                <routerLink @click="route().routeName = 'anime'" :to="{ name: 'lists', params: { type: 'anime' } }">anime
+                <routerLink @click="route().routeName = 'anime', route().modal = false"
+                    :to="{ name: 'lists', params: { type: 'anime' } }">anime
                 </routerLink>
             </li>
             <li>
-                <routerLink @click="route().routeName = 'multiSearch'"
+                <routerLink @click="route().routeName = 'multiSearch', route().modal = false"
                     :to="{ name: 'lists', params: { type: 'multiSearch' } }">multiqidiruv
                 </routerLink>
             </li>
