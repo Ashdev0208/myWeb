@@ -8,7 +8,7 @@
         </div>
         <div class="container">
             <Nav></Nav>
-            <Carousel :autoplay="3000" :wrap-around="true" :items-to-show="1.5" :breakpoints="CarouselSetting.breakpoints">
+            <Carousel :autoplay="300000" :wrap-around="true" :items-to-show="1.5" :breakpoints="CarouselSetting.breakpoints">
                 <Slide v-for="(array, slide) in server" :key="slide">
                     <div class="carousel__item">
                         <div class="slideItem rel">
@@ -37,17 +37,10 @@
                 </template>
             </Carousel>
             <section class="info">
-                <div class="title">
-                    <h1>
-                        bepul online ko'rish uchun website
-                    </h1>
-                    <br>
-                </div>
                 <div class="row ai-c js-b">
                     <div class="img"><img src="../assets/mainPic.jpg" alt="" class="contain"></div>
                     <div class="text">
-                        Aems Studios - Men Ovozlashtirayapman ma'nosini anglatuvchi yosh yigit qizlardan iborat bo'lgan, asl
-                        dublyajni qayta tiklashni niyat qilgan va o'zbek tilini rivojini istagan jamoa!
+                        Aems Studios-Havaskor dublajchilar jamoasi
                     </div>
                 </div>
             </section>
@@ -191,6 +184,7 @@ let CarouselSetting = ref({
 
 .carousel__slide {
     padding: 10px;
+    
 }
 
 .carousel__prev,

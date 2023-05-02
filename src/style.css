@@ -152,6 +152,7 @@ ul li {
 .overflow {
   overflow: hidden;
   border-radius: 15px;
+  height: 350px;
 }
 
 
@@ -182,8 +183,12 @@ ul li {
 .slideItem .imgBlur {
   transition: .2s ease all;
   width: 100%;
-  height: 350px;
   object-fit: cover;
+  height: 350px;
+}
+
+.rel.slideItem{
+  width: 100%;
 }
 
 .slideItem:hover .btn.imgBtn {
