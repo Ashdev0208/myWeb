@@ -79,11 +79,6 @@
                 </Carousel>
             </section>
             <br><br>
-
-            <div class="title">
-                hello
-            </div>
-
             <Footer></Footer>
 
         </div>

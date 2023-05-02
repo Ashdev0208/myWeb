@@ -11,7 +11,7 @@ import { route } from "../store/store.js"
                 <div class="close-side">Menu</div>
             </li>
             <li class="underline">
-                <routerLink to="/">bosh sahifa</routerLink>
+                <routerLink @click="route().modal = false" to="/">bosh sahifa</routerLink>
             </li>
             <li>
                 <routerLink @click="route().routeName = 'film', route().modal = false"
