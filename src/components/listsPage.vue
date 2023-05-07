@@ -13,7 +13,7 @@
             <div class="row ai-c js-b">
                 <div class="pages row ">
                     <div class="title row ai-c">
-                        <span class="directory">home</span>
+                        <span class="directory" @click="redirectToMoviePage(1)">home</span>
                         <span class="text">
                             >
                         </span>
@@ -57,13 +57,19 @@
 <script setup>
 import { route } from "../store/store.js"
 import { ref, watchEffect } from "vue"
+import { useRouter } from "vue-router";
 import datas from '../reusable/index.js';
 import Nav from "./nav.vue"
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
+const router = useRouter();
+function redirectToMoviePage(id) {
+    router.push({
+        path: `/movie/${id}`,
+    });
+}
 let val = ref(Math.round(Math.random() * datas.length))
 watchEffect(() => {
-    console.log(route().routeName);
     val.value = Math.round(Math.random() * datas.length)
 })
 </script>

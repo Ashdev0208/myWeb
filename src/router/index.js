@@ -13,7 +13,8 @@ const routes = [
     {
         path: '/movie/:id',
         name: "movie",
-        component: ()=>import('../components/moviePage.vue')
+        component: ()=>import('../components/moviePage.vue'),
+        props: true
     },
 ];
 const router = createRouter({

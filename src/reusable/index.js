@@ -3,6 +3,9 @@ const server = [
     {
         id: 1,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2021,
             img: new URL('../assets/banner.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -30,6 +33,9 @@ const server = [
     {
         id: 2,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2012,
             img: new URL('../assets/anime.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -57,6 +63,9 @@ const server = [
     {
         id: 3,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2022,
             img: new URL('../assets/fanLetter.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -76,6 +85,9 @@ const server = [
     {
         id: 4,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2023,
             img: new URL('../assets/lock.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -88,6 +100,9 @@ const server = [
     {
         id: 5,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2022,
             img: new URL('../assets/magican2.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -101,6 +116,9 @@ const server = [
     {
         id: 6,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2021,
             img: new URL('../assets/mainPic.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -118,8 +136,11 @@ const server = [
         }
     },
     {
-        id: 6,
+        id: 7,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2021,
             img: new URL('../assets/movie0.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -137,8 +158,11 @@ const server = [
         }
     },
     {
-        id: 6,
+        id: 8,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2022,
             img: new URL('../assets/mainPic.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
@@ -160,8 +184,11 @@ const server = [
         }
     },
     {
-        id: 6,
+        id: 9,
         banner: {
+            country: "AQSH",
+            language: "o'zbek",
+            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2022,
             img: new URL('../assets/metro.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',

@@ -8,7 +8,8 @@
         </div>
         <div class="container">
             <Nav></Nav>
-            <Carousel :autoplay="300000" :wrap-around="true" :items-to-show="1.5" :breakpoints="CarouselSetting.breakpoints">
+            <Carousel :autoplay="300000" :wrap-around="true" :items-to-show="1.5"
+                :breakpoints="CarouselSetting.breakpoints">
                 <Slide v-for="(array, slide) in server" :key="slide">
                     <div class="carousel__item">
                         <div class="slideItem rel">
@@ -20,7 +21,7 @@
                                     server[slide].banner.partNumber
                                 }}<br>seriya</div>
                             </div>
-                            <div class="overflow">
+                            <div class="overflow" @click="redirectToMoviePage(array.id)">
                                 <img class="contain imgBlur" :src="server[slide].banner.img" alt="">
                             </div>
                             <div class="movie-title">
@@ -94,6 +95,7 @@
 
 <script setup>
 import { ref } from "vue"
+import { useRouter } from "vue-router";
 import server from '../reusable/index.js';
 import Nav from "./nav.vue"
 import 'vue3-carousel/dist/carousel.css';
@@ -106,7 +108,19 @@ let anime = ref([]);
 let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
+let directLink = ref([]);
+server.forEach(item => {
+    directLink.value.push(item.banner.title.replace(/ /g, "-"))
+})
 
+const router = useRouter();
+
+
+function redirectToMoviePage(id) {
+    router.push({
+        path: `/movie/${id}`,
+    });
+}
 
 let num = (num) => {
     if (num >= 4) {
@@ -151,7 +165,7 @@ let CarouselSetting = ref({
         snapAlign: 'center',
     },
     breakpoints: {
-        768: {
+        991: {
             // itemsToShow: 1,
             snapAlign: 'center',
         },
@@ -179,7 +193,7 @@ let CarouselSetting = ref({
 
 .carousel__slide {
     padding: 10px;
-    
+
 }
 
 .carousel__prev,

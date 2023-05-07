@@ -6,15 +6,15 @@
 </script>
 
 <template>
-
   <div>
     <router-view v-slot="{ Component, route }">
-      <transition name="slide-fade" mode="out-in" :duration="{ enter: 400, leave: 500 }">
+      <transition name="slide-fade" mode="out-in" :duration="400">
         <div :key="route.name">
           <component :is="Component"></component>
         </div>
       </transition>
     </router-view>
+
   </div>
 </template>
 

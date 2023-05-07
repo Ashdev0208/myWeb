@@ -23,6 +23,8 @@ section {
   padding-top: 40px;
 }
 
+
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -34,6 +36,10 @@ section {
 
 .js-b {
   justify-content: space-between;
+}
+
+.col-6 {
+  width: 50%;
 }
 
 .title {
@@ -187,7 +193,7 @@ ul li {
   height: 350px;
 }
 
-.rel.slideItem{
+.rel.slideItem {
   width: 100%;
 }
 
@@ -239,6 +245,86 @@ ul li {
 
 .allMovies:hover {
   background: rgba(80, 80, 80, 0.874);
+}
+
+.movieImg {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  height: 600px;
+}
+
+.movieImg img {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.movieImg::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #00000073;
+}
+
+.desc {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 90%;
+  padding: 10px;
+  transform: translateY(-50%);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.movieInfo {
+  background: #ffffff31;
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  width: 49%;
+  margin-right: 1%;
+  border-radius: 10px;
+}
+
+
+.movieInfo .col-6 {
+  background: rgb(38, 38, 38);
+  margin: 10px 0;
+  padding: 10px;
+  width: 48%;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.movieInfo .col-6:hover{
+  opacity: .6;
+}
+
+.movieInfo .row > .col-6.row{
+  padding-left: 0;
+}
+
+.tag{
+  width: 30%;
+  font-size: 28%;
+}
+
+.tag:nth-child(2){
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+}
+
+.movieInfo .col-6:nth-child(even) {
+  background: #1c1c1c;
+}
+
+@media only screen and (max-width: 1120px) {
+  .title {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 815px) {
