@@ -13,7 +13,7 @@
             <div class="row ai-c js-b">
                 <div class="pages row ">
                     <div class="title row ai-c">
-                        <span class="directory" @click="redirectToMoviePage(1)">home</span>
+                        <span class="directory">home</span>
                         <span class="text">
                             >
                         </span>
@@ -27,22 +27,25 @@
                     Aems Studios
                 </div>
             </div>
-            <section class="content">
-                <div class="slideItem rel">
+            <section class="content row ai-c js-b">
+                <div v-for="(data, index) in paginatedItems" class="slideItem rel listCard" :key="index"
+                    @click="redirectToMoviePage(data.id)">
                     <div class="part">
-                        <div class="season"><br>season</div>
-                        <div class="part-number"><br>seriya</div>
+                        <div class="season">{{ data.banner.season }}<br>season</div>
+                        <div class="part-number">{{ data.banner.partNumber }}<br>seriya</div>
                     </div>
-                    <div class="img overflow "><img class="contain imgBlur" src="../assets/anime.jpg" alt=""></div>
-                    <div class="title">hello there</div>
+                    <div class="img overflow "><img class="contain imgBlur" :src="data.banner.img" alt=""></div>
+                    <div class="title">{{ data.banner.title }}</div>
                     <button class="btn imgBtn">ko'ramiz</button>
                 </div>
-                <div class="pagination">
-                    <button class="pagination__button btn">
-                        1
-                    </button>
-                </div>
             </section>
+            <br><br>
+            <paginate :page-count="pageCounter" :container-class="'pagination'" :prev-text="'<'" :next-text="'>'"
+                :click-handler="handlePageChange">
+                <span class="pagination__button btn" slot="prevContent">Changed previous button</span>
+                <span slot="nextContent">Changed next button</span>
+                <span slot="breakViewContent"></span>
+            </paginate>
             <section>
                 <Footer></Footer>
             </section>
@@ -55,8 +58,9 @@
 </template>
 
 <script setup>
+import Paginate from 'vuejs-paginate-next';
 import { route } from "../store/store.js"
-import { ref, watchEffect } from "vue"
+import { ref, watchEffect, computed } from "vue"
 import { useRouter } from "vue-router";
 import datas from '../reusable/index.js';
 import Nav from "./nav.vue"
@@ -68,10 +72,52 @@ function redirectToMoviePage(id) {
         path: `/movie/${id}`,
     });
 }
+
+let datasInData = ref(datas.filter(item => {
+    if (item.banner.movieType == route().routeName) {
+        return item
+    }
+}));
+
 let val = ref(Math.round(Math.random() * datas.length))
 watchEffect(() => {
-    val.value = Math.round(Math.random() * datas.length)
+    val.value = Math.round(Math.random() * datas.length);
+    datasInData.value = datas.filter(item => {
+        if (item.banner.movieType == route().routeName) {
+            return item
+        }
+    });
 })
+const pageSize = 10;
+const currentPage = ref(1);
+
+const paginatedItems = computed(() => {
+    const startIndex = (currentPage.value - 1) * pageSize;
+    const endIndex = startIndex + pageSize;
+    return datasInData.value.slice(startIndex, endIndex);
+});
+
+const pageCounter = computed(() => {
+    return Math.ceil(datasInData.value.length / pageSize);
+});
+
+function handlePageChange(page) {
+    currentPage.value = page;
+}
 </script>
 
-<style scoped></style>
+<style scoped>
+.pagination {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+
+.slideItem.listCard {
+    width: 23% !important;
+    margin-top: 40px !important;
+}
+
+</style>

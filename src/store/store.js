@@ -5,7 +5,7 @@ import { useRoute } from "vue-router";
 export const route = defineStore("writeRoute", {
     state: () => {
         return {
-            routeName: useRoute().name,
+            routeName: useRoute().params.type,
             modal: false
         }
     }

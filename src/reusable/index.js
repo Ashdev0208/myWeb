@@ -1,5 +1,6 @@
 
 const server = [
+    
     {
         id: 1,
         banner: {
@@ -30,6 +31,7 @@ const server = [
             ]
         }
     },
+    
     {
         id: 2,
         banner: {
@@ -92,7 +94,6 @@ const server = [
             img: new URL('../assets/lock.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
             type: ['Drama', 'Detiktiv'],
-            partNumber: 4,
             title: "Qulfdan Chiqarilgan",
             movieType: 'film',
         }
@@ -107,8 +108,6 @@ const server = [
             img: new URL('../assets/magican2.jpg', import.meta.url).href,
             src: '//ok.ru/videoembed/1914646039083',
             type: ['Fantastika', 'Drama', 'Musiqiy'],
-            season: 1,
-            partNumber: 4,
             title: "Sehrlangan 2",
             movieType: 'film'
         }

@@ -52,7 +52,7 @@
                 <Carousel :items-to-show="num(lengthItem[id].length)" :breakpoints="CarouselSetting.breakpoints">
                     <Slide v-for="(film, index) in lengthItem[id]" :key="index">
                         <div class="carousel__item">
-                            <div class="slideItem rel">
+                            <div class="slideItem rel" @click="redirectToMoviePage(film.id)">
                                 <div class="part">
                                     <div class="season" v-show="film.banner.season
                                         ">{{ film.banner.season }}<br>season</div>

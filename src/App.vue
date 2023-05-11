@@ -6,6 +6,7 @@
 </script>
 
 <template>
+
   <div>
     <router-view v-slot="{ Component, route }">
       <transition name="slide-fade" mode="out-in" :duration="400">
