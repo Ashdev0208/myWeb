@@ -78,7 +78,7 @@ const server = [
             part: [
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1064661158539',
-                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1176370547339',
                 '//ok.ru/videoembed/1914646039083',
             ]
         }
