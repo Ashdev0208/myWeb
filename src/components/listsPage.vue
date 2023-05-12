@@ -112,11 +112,4 @@ function handlePageChange(page) {
     gap: 30px;
     justify-content: center;
 }
-
-
-
-.slideItem.listCard {
-    width: 23%;
-    margin-top: 40px;
-}
 </style>

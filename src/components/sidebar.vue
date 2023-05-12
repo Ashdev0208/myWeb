@@ -36,7 +36,7 @@ import { route } from "../store/store.js"
             </li>
             <li>
                 <routerLink @click="route().routeName = 'multiSearch', route().modal = false"
-                    :to="{ name: 'lists', params: { type: 'multiSearch' } }">multiqidiruv
+                    :to="{ name: 'search' }">multiqidiruv
                 </routerLink>
             </li>
         </ul>

@@ -15,6 +15,11 @@ const routes = [
         name: "movie",
         component: () => import('../components/moviePage.vue')
     },
+    {
+        path: '/search',
+        name: "search",
+        component: () => import('../components/search.vue')
+    },
 ];
 const router = createRouter({
     routes,

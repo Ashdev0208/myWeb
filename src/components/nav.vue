@@ -5,7 +5,7 @@
                 <routerLink to="/">Aems Studios</routerLink>
             </div>
             <div class="findMovie">
-                <input type="text" placeholder="search movie">
+                <input type="text" v-model="route().searchItem" placeholder="search movie">
                 <button class="icon">🔎</button>
             </div>
             <div class="menu">
@@ -16,12 +16,12 @@
 </template>
 
 <script setup>
-import { route } from '../store/store'; 
+import { route } from '../store/store';
 
 
 </script>
 
-<style scoped>
+<style>
 nav {
     padding: 20px 0;
     width: 100%;

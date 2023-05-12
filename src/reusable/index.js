@@ -6,10 +6,11 @@ const server = [
         banner: {
             country: "AQSH",
             language: "o'zbek",
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
+            description: `18 yoshli Ga Du Sim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz v yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
+            Na U Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi`,
             year: 2021,
-            img: new URL('../assets/banner.jpg', import.meta.url).href,
-            type: ['Horror', 'Drama', 'Komediya',],
+            img: new URL('../assets/movie0.jpg', import.meta.url).href,
+            type: ['Horror', 'hayoti', 'fantastika', "mistika"],
             season: 1,
             partNumber: 12,
             title: "buyuk shaman go do shim",
@@ -133,30 +134,9 @@ const server = [
             ]
         }
     },
+
     {
         id: 7,
-        banner: {
-            country: "AQSH",
-            language: "o'zbek",
-            description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
-            year: 2021,
-            img: new URL('../assets/movie0.jpg', import.meta.url).href,
-            src: '//ok.ru/videoembed/1914646039083',
-            type: ['Drama', 'Komediya'],
-            season: 1,
-            partNumber: 8,
-            title: "Sening Playlisting",
-            movieType: 'serial',
-            part: [
-                '//ok.ru/videoembed/1914646039083',
-                '//ok.ru/videoembed/1914646039083',
-                '//ok.ru/videoembed/1914646039083',
-                '//ok.ru/videoembed/1914646039083',
-            ]
-        }
-    },
-    {
-        id: 8,
         banner: {
             country: "AQSH",
             language: "o'zbek",
@@ -182,7 +162,7 @@ const server = [
         }
     },
     {
-        id: 9,
+        id: 8,
         banner: {
             country: "AQSH",
             language: "o'zbek",

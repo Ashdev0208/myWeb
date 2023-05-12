@@ -6,7 +6,8 @@ export const route = defineStore("writeRoute", {
     state: () => {
         return {
             routeName: useRoute().params.type,
-            modal: false
+            modal: false,
+            searchItem:""
         }
     }
 })

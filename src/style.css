@@ -300,7 +300,7 @@ ul li {
 }
 
 .movieInfo .col-6:hover {
-  opacity: .6;
+  opacity: .8;
 }
 
 .movieInfo .row>.col-6.row {
@@ -319,6 +319,11 @@ ul li {
 
 .movieInfo .col-6:nth-child(even) {
   background: #1c1c1c;
+}
+
+.slideItem.listCard {
+  width: 23%;
+  margin-top: 40px;
 }
 
 @media only screen and (max-width: 1120px) {
