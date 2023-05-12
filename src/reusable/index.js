@@ -1,6 +1,6 @@
 
 const server = [
-    
+
     {
         id: 1,
         banner: {
@@ -9,7 +9,6 @@ const server = [
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2021,
             img: new URL('../assets/banner.jpg', import.meta.url).href,
-            src: '//ok.ru/videoembed/1914646039083',
             type: ['Horror', 'Drama', 'Komediya'],
             season: 1,
             partNumber: 12,
@@ -17,8 +16,8 @@ const server = [
             movieType: 'serial',
             part: [
                 '//ok.ru/videoembed/1914646039083',
-                '//ok.ru/videoembed/1914646039083',
-                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1057198639755',
+                '//ok.ru/videoembed/1064661158539',
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1914646039083',
@@ -31,7 +30,7 @@ const server = [
             ]
         }
     },
-    
+
     {
         id: 2,
         banner: {

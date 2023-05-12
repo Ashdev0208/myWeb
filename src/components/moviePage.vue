@@ -23,6 +23,7 @@
                                 <div class="col-6">Tili</div>
                                 <div class="col-6">{{ moviePageData[0].banner.language }}</div>
                                 <div class="col-6">Davlat</div>
+
                                 <div class="col-6">{{ moviePageData[0].banner.country }}</div>
                             </div>
                         </div>
@@ -36,7 +37,8 @@
                     </div>
                 </section>
                 <div style="margin-top: 50px;">
-                    <iframe v-if="isOpen" width="100%" height="500" :src="source" frameborder="0"
+                    <iframe v-if="isOpen" width="100%" height="500"
+                        :src="source == '' ? moviePageData[0].banner.src : source" frameborder="0"
                         style="border-radius: 10px" allowfullscreen>
                     </iframe>
                     <div class="row ai-c js-b" style="margin-top: 20px;">
@@ -48,8 +50,8 @@
                         </div>
                     </div>
                     <div class="row js-b" style="align-items: center;"><button style="margin-top: 20px;"
-                            v-for="(data, index) in moviePageData[0].banner.part" :class="{ selectedBtn: isClass }"
-                            @click="partList(data)" class="btn movieBtn">{{ index + 1 }}-qism</button></div>
+                            v-for="(data, index) in moviePageData[0].banner.part" :class="{ selectedBtn: isClass == index }"
+                            @click="partList(data, index)" class="btn movieBtn">{{ index + 1 }}-qism</button></div>
 
                 </div>
 
@@ -78,18 +80,21 @@ let moviePageData = ref(datas.filter(item => {
         return item
     }
 }));
+
 let isOpen = ref(false)
-let source = ref();
-let isClass = ref(false)
-const partList = ref((id) => {
-    source.value = id;
+let source = ref('');
+let isClass = ref()
+if (moviePageData.value[0].banner.part) {
+    isOpen.value = false
+} else {
+    isOpen.value = true
+}
+const partList = ref((val, id) => {
+    source.value = val;
     isOpen.value = true;
-    isClass.value = true;
+    isClass.value = id;
 });
 
-let classActive = ref((e) => {
-    console.log(event);
-})
 
 </script>
 
