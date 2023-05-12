@@ -9,7 +9,7 @@ const server = [
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero placeat eius nihil nulla reprehenderit magni molestias iste sint sequi accusantium adipisci, at ex inventore labore dolore consequuntur harum officia libero.',
             year: 2021,
             img: new URL('../assets/banner.jpg', import.meta.url).href,
-            type: ['Horror', 'Drama', 'Komediya'],
+            type: ['Horror', 'Drama', 'Komediya',],
             season: 1,
             partNumber: 12,
             title: "buyuk shaman go do shim",

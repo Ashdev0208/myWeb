@@ -9,17 +9,31 @@
             </div>
             <div class="container">
                 <Nav></Nav>
-                <section class="aboutForMovie rel">
-                    <div class="img movieImg"><img style="cursor: none;pointer-events: none;"
-                            :src="moviePageData[0].banner.img" class="" alt=""></div>
-                    <div class="row ai-c js-b desc">
-                        <div class="movieInfo col-6">
+                <div class="pages row ">
+                    <div class="title row ai-c">
+                        <span class="directory">home</span>
+                        <span class="text">
+                            >
+                        </span>
+                        <span class="directory">{{ route().routeName }}</span>
+                        <span class="text">
+                            >
+                        </span>
+                        <span class="directory">{{ moviePageData[0].banner.title }}</span>
+                    </div>
+                </div>
+                <section class="aboutForMovie rel row ai-c js-b">
+                    <div class="img movieImg"><img :src="moviePageData[0].banner.img"
+                            :style="{ objectPosition: moviePageData[0].banner.x + '%' }" class="" alt=""></div>
+                    <div class="desc">
+                        <div class="movieInfo ">
                             <div class="row js-b ai-c">
                                 <div class="col-6">Yili</div>
                                 <div class="col-6">{{ moviePageData[0].banner.year }}</div>
                                 <div class="col-6">Janr</div>
-                                <div class="col-6 row ai-c"><span class="tag"
-                                        v-for="typeMovie in moviePageData[0].banner.type">{{ typeMovie }}</span></div>
+                                <div class="col-6 row ai-c" style="align-items: center;justify-content: center;"><span
+                                        class="tag" v-for="typeMovie in moviePageData[0].banner.type">{{ typeMovie }}</span>
+                                </div>
                                 <div class="col-6">Tili</div>
                                 <div class="col-6">{{ moviePageData[0].banner.language }}</div>
                                 <div class="col-6">Davlat</div>
@@ -27,7 +41,8 @@
                                 <div class="col-6">{{ moviePageData[0].banner.country }}</div>
                             </div>
                         </div>
-                        <div class="row ai-c js-b col-6">
+                        <br><br>
+                        <div class="row">
                             <div class="title" style="font-weight: 400;margin-bottom: 10px;">film haqida qisqacha malumot:
                             </div>
                             <div class="text">
@@ -52,7 +67,6 @@
                     <div class="row js-b" style="align-items: center;"><button style="margin-top: 20px;"
                             v-for="(data, index) in moviePageData[0].banner.part" :class="{ selectedBtn: isClass == index }"
                             @click="partList(data, index)" class="btn movieBtn">{{ index + 1 }}-qism</button></div>
-
                 </div>
 
                 <section>
@@ -98,4 +112,6 @@ const partList = ref((val, id) => {
 
 </script>
 
-<style></style>
+<style>
+
+</style>

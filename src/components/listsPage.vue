@@ -106,7 +106,7 @@ function handlePageChange(page) {
 }
 </script>
 
-<style scoped>
+<style>
 .pagination {
     display: flex;
     gap: 30px;
@@ -116,8 +116,7 @@ function handlePageChange(page) {
 
 
 .slideItem.listCard {
-    width: 23% !important;
-    margin-top: 40px !important;
+    width: 23%;
+    margin-top: 40px;
 }
-
 </style>
