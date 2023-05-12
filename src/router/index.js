@@ -1,4 +1,4 @@
-import { createRouter, createMemoryHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
     {
@@ -13,13 +13,12 @@ const routes = [
     {
         path: '/movie/:id',
         name: "movie",
-        component: () => import('../components/moviePage.vue'),
-        props: true
+        component: () => import('../components/moviePage.vue')
     },
 ];
 const router = createRouter({
     routes,
-    history: createMemoryHistory(),
+    history: createWebHistory(),
 });
 
 
