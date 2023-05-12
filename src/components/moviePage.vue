@@ -15,7 +15,7 @@
                         <span class="text">
                             >
                         </span>
-                        <span class="directory">{{ route().routeName }}</span>
+                        <span class="directory">{{ moviePageData[0].banner.movieType }}</span>
                         <span class="text">
                             >
                         </span>

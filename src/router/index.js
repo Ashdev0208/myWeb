@@ -1,26 +1,26 @@
-import {createRouter , createWebHistory} from 'vue-router';
+import { createRouter, createMemoryHistory } from 'vue-router';
 
 const routes = [
     {
         path: '/',
-        component: ()=>import('../components/firstPage.vue')
+        component: () => import('../components/firstPage.vue')
     },
     {
         path: '/lists/:type',
         name: "lists",
-        component: ()=>import('../components/listsPage.vue'),
+        component: () => import('../components/listsPage.vue'),
     },
     {
         path: '/movie/:id',
         name: "movie",
-        component: ()=>import('../components/moviePage.vue'),
+        component: () => import('../components/moviePage.vue'),
         props: true
     },
 ];
 const router = createRouter({
     routes,
-    history: createWebHistory(),
-  });
+    history: createMemoryHistory(),
+});
 
-  
-  export default router;
+
+export default router;
