@@ -1,5 +1,6 @@
 <template>
     <div>
+        <loading></loading>
         <div class="row">
             <div class="side">
                 <sidebar></sidebar>
@@ -84,6 +85,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router';
+import loading from './loading.vue'
 import Nav from "./nav.vue"
 import sidebar from "./sidebar.vue"
 import Footer from "./footer.vue"

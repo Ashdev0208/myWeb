@@ -1,4 +1,5 @@
 <template>
+    <loading></loading>
     <div class="row">
         <div class="side">
             <sidebar></sidebar>
@@ -101,6 +102,7 @@ import Nav from "./nav.vue"
 import 'vue3-carousel/dist/carousel.css';
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
+import loading from './loading.vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { route } from "../store/store";
 let length = ref(['serial', 'film', "anime", "multfilm"])
