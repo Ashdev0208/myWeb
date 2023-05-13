@@ -13,11 +13,11 @@
             <div class="row ai-c js-b">
                 <div class="pages row ">
                     <div class="title row ai-c">
-                        <span class="directory">home</span>
+                        <span class="directory" @click="router.push('/')">bosh sahifa</span>
                         <span class="text">
                             >
                         </span>
-                        <span class="directory">{{ route().routeName }}</span>
+                        <span class="directory">{{ route().routeName == 'cartoon' ? 'multfilm' : route().routeName}}</span>
                         <span class="text">
                             >
                         </span>
@@ -29,7 +29,7 @@
             </div>
             <section class="content row ai-c js-b">
                 <div v-for="(data, index) in paginatedItems" class="slideItem rel listCard" :key="index"
-                    @click="redirectToMoviePage(data.id)">
+                    @click="redirectToMoviePage(data.id, data.banner.title)">
                     <div class="part">
                         <div class="season">{{ data.banner.season }}<br>season</div>
                         <div class="part-number">{{ data.banner.partNumber }}<br>seriya</div>
@@ -66,16 +66,18 @@ import datas from '../reusable/index.js';
 import Nav from "./nav.vue"
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
+let directLink = ref();
 const router = useRouter();
-function redirectToMoviePage(id) {
+function redirectToMoviePage(id, title) {
+    directLink.value = title.replace(/ /g, "-");
     router.push({
-        path: `/movie/${id}`,
+        path: `/movie/${id}/${directLink.value}`
     });
 }
 
 let datasInData = ref(datas.filter(item => {
     if (item.banner.movieType == route().routeName) {
-        return item
+        return item;
     }
 }));
 

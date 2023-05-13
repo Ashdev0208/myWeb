@@ -25,7 +25,7 @@ import { route } from "../store/store.js"
                 </routerLink>
             </li>
             <li>
-                <routerLink @click="route().routeName = 'multfilm', route().modal = false"
+                <routerLink @click="route().routeName = 'cartoon', route().modal = false"
                     :to="{ name: 'lists', params: { type: 'cartoon' } }">
                     multfilm</routerLink>
             </li>

@@ -5,7 +5,7 @@
                 <routerLink to="/">Aems Studios</routerLink>
             </div>
             <div class="findMovie">
-                <input type="text" v-model="route().searchItem" placeholder="search movie">
+                <input type="text" v-model="route().searchItem" @keydown="searchInput()" placeholder="search movie">
                 <button class="icon">🔎</button>
             </div>
             <div class="menu">
@@ -17,6 +17,16 @@
 
 <script setup>
 import { route } from '../store/store';
+import { useRouter } from 'vue-router';
+let router = useRouter();
+const searchInput = () => {
+
+    if (event.keyCode == 13) {
+        router.push('/search')
+    }
+}
+
+window.scrollBy({ top: 0 });
 
 
 </script>

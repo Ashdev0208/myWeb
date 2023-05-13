@@ -4,13 +4,11 @@
         <div class="side">
             <sidebar></sidebar>
             <div @click="route().modal = false" class="closeModal">
-
             </div>
         </div>
         <div class="container">
             <Nav></Nav>
-            <Carousel :autoplay="300000" :wrap-around="true" :items-to-show="1.5"
-                :breakpoints="CarouselSetting.breakpoints">
+            <Carousel :autoplay="3000" :wrap-around="true" :items-to-show="1.5" :breakpoints="CarouselSetting.breakpoints">
                 <Slide v-for="(array, slide) in server" :key="slide">
                     <div class="carousel__item">
                         <div class="slideItem rel">
@@ -22,7 +20,7 @@
                                     server[slide].banner.partNumber
                                 }}<br>seriya</div>
                             </div>
-                            <div class="overflow" @click="redirectToMoviePage(array.id)">
+                            <div class="overflow" @click="redirectToMoviePage(array.id, array.banner.title)">
                                 <img class="contain imgBlur" :src="server[slide].banner.img" alt="">
                             </div>
                             <div class="movie-title">
@@ -33,7 +31,7 @@
                         </div>
                     </div>
                 </Slide>
-
+                item.banner.title.replace(/ /g, "-")
                 <template #addons>
                     <Navigation />
                 </template>
@@ -53,7 +51,7 @@
                 <Carousel :items-to-show="num(lengthItem[id].length)" :breakpoints="CarouselSetting.breakpoints">
                     <Slide v-for="(film, index) in lengthItem[id]" :key="index">
                         <div class="carousel__item">
-                            <div class="slideItem rel" @click="redirectToMoviePage(film.id)">
+                            <div class="slideItem rel" @click="redirectToMoviePage(film.id, film.banner.title)">
                                 <div class="part">
                                     <div class="season" v-show="film.banner.season
                                         ">{{ film.banner.season }}<br>season</div>
@@ -105,22 +103,20 @@ import Footer from './footer.vue'
 import loading from './loading.vue'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
 import { route } from "../store/store";
-let length = ref(['serial', 'film', "anime", "multfilm"])
+let length = ref(['Serial', 'Film', "Anime", "Multfilm"])
 let anime = ref([]);
 let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
-let directLink = ref([]);
-server.forEach(item => {
-    directLink.value.push(item.banner.title.replace(/ /g, "-"))
-})
+let directLink = ref();
 
 const router = useRouter();
 
 
-function redirectToMoviePage(id) {
+function redirectToMoviePage(id, title) {
+    directLink.value = title.replace(/ /g, "-");
     router.push({
-        path: `/movie/${id}`,
+        path: `/movie/${id}/${directLink.value}`
     });
 }
 

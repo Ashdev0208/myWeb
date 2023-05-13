@@ -12,11 +12,14 @@
                 <Nav></Nav>
                 <div class="pages row ">
                     <div class="title row ai-c">
-                        <span class="directory">home</span>
+                        <span class="directory" @click="router.push('/')">bosh sahifa</span>
                         <span class="text">
                             >
                         </span>
-                        <span class="directory">{{ moviePageData[0].banner.movieType }}</span>
+                        <span class="directory"
+                            @click="router.push({ path: `/lists/${moviePageData[0].banner.movieType}` })">{{
+                                moviePageData[0].banner.movieType == 'cartoon' ? 'multfilm' : moviePageData[0].banner.movieType
+                            }}</span>
                         <span class="text">
                             >
                         </span>
@@ -84,18 +87,21 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRoute } from 'vue-router';
+import { useRoute, useRouter } from 'vue-router';
 import loading from './loading.vue'
 import Nav from "./nav.vue"
 import sidebar from "./sidebar.vue"
 import Footer from "./footer.vue"
 import datas from "../reusable/index.js"
 import { route } from "../store/store.js"
+
+let router = useRouter();
 let moviePageData = ref(datas.filter(item => {
     if (item.id == useRoute().params.id) {
         return item
     }
 }));
+
 
 let isOpen = ref(false)
 let source = ref('');
@@ -114,6 +120,4 @@ const partList = ref((val, id) => {
 
 </script>
 
-<style>
-
-</style>
+<style></style>

@@ -1,13 +1,9 @@
 
 <script setup>
-
-
-
 </script>
 
 <template>
-
-  <div>
+  <div class="parent">
     <router-view v-slot="{ Component, route }">
       <transition name="slide-fade" mode="out-in" :duration="400">
         <div :key="route.name">
@@ -25,17 +21,16 @@
   transition: all .4s ease-out;
 }
 
+
 .slide-fade-leave-active {
   transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .slide-fade-enter-from {
-  transform: translateX(-150px);
   opacity: 0;
 }
 
 .slide-fade-leave-to {
-  transform: translateX(150px);
   opacity: 0;
 }
 </style>

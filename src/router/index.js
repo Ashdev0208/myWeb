@@ -11,7 +11,7 @@ const routes = [
         component: () => import('../components/listsPage.vue'),
     },
     {
-        path: '/movie/:id',
+        path: '/movie/:id/:directLink',
         name: "movie",
         component: () => import('../components/moviePage.vue')
     },
