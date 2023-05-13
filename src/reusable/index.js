@@ -1,6 +1,36 @@
 
 const server = [
-
+{
+        id: 0,
+        banner: {
+            country: "o'zbek",
+            language: "o'zbek",
+            description: `18 yoshli Ga Du Sim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz v yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
+            Na U Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi`,
+            year: 2021,
+            img: "https://i.pinimg.com/originals/d6/d6/0c/d6d60cd014d95b15a5a44cc0597f5947.jpg",
+            type: ['krimanilzim', 'hayoti', 'fantastika', "mistika"],
+            season: 1,
+            partNumber: 12,
+            title: "hay mayli",
+            movieType: 'cartoon',
+            part: [
+                '//ok.ru/videoembed/5028913154698'
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1057198639755',
+                '//ok.ru/videoembed/1064661158539',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+                '//ok.ru/videoembed/1914646039083',
+            ]
+        }
+    },
     {
         id: 1,
         banner: {
