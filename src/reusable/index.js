@@ -1,6 +1,5 @@
 
 const server = [
-
     {
         id: 1,
         banner: {
@@ -9,12 +8,13 @@ const server = [
             description: `18 yoshli Ga Du Sim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz v yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
             Na U Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi`,
             year: 2021,
-            img: new URL('../assets/movie0.jpg', import.meta.url).href,
+            img: 'http://localhost:5173/src/assets/lock.jpg',
             type: ['Horror', 'hayoti', 'fantastika', "mistika"],
-            season: 1,
+            season: 1, 
             partNumber: 10,
             title: "buyuk shaman go do shim",
             movieType: 'serial',
+            bannerIsActive: 7,
             part: [
                 '//ok.ru/videoembed/5940417137229',
                 '//ok.ru/videoembed/5941482424909',
@@ -48,6 +48,7 @@ const server = [
             partNumber: 12,
             title: "Kichik Xonimlar",
             movieType: 'serial',
+            bannerIsActive: 2,
             part: [
                 '//ok.ru/videoembed/5934033996365',
             ]
@@ -67,6 +68,7 @@ const server = [
             partNumber: 4,
             title: "Muhlis Xati",
             movieType: 'serial',
+            bannerIsActive: 3,
             part: [
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1064661158539',
@@ -87,6 +89,7 @@ const server = [
             type: ['Drama', 'Detiktiv'],
             title: "Qulfdan Chiqarilgan",
             movieType: 'film',
+            bannerIsActive: 4,
         }
     },
     {
@@ -100,6 +103,7 @@ const server = [
             src: '//ok.ru/videoembed/5935166786125',
             type: ['Fantastika', 'Drama', 'Musiqiy'],
             title: "Sehrlangan 2",
+            bannerIsActive: 5,
             movieType: 'film'
         }
     },
@@ -114,6 +118,7 @@ const server = [
             src: '//ok.ru/videoembed/5934495763021',
             type: ['Drama', 'Komediya'],
             title: "ob havo malikasi",
+            bannerIsActive: 6,
             movieType: 'anime',
         }
     },
@@ -132,6 +137,7 @@ const server = [
             partNumber: 8,
             title: "Sening Playlisting",
             movieType: 'serial',
+            bannerIsActive: 1,
             part: [
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1914646039083',

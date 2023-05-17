@@ -9,24 +9,24 @@
         <div class="container">
             <Nav></Nav>
             <Carousel :autoplay="3000" :wrap-around="true" :items-to-show="1.5" :breakpoints="CarouselSetting.breakpoints">
-                <Slide v-for="(array, slide) in server" :key="slide">
+                <Slide v-for="(data, slide) in banner" :key="slide">
                     <div class="carousel__item">
                         <div class="slideItem rel">
 
                             <div class="part">
-                                <div class="season" v-if="server[slide].banner.season
-                                    ">{{ server[slide].banner.season }}<br>season</div>
-                                <div class="part-number" v-if="server[slide].banner.partNumber">{{
-                                    server[slide].banner.partNumber
+                                <div class="season" v-if="data.banner.season
+                                    ">{{ data.banner.season }}<br>season</div>
+                                <div class="part-number" v-if="data.banner.partNumber">{{
+                                    data.banner.partNumber
                                 }}<br>seriya</div>
                             </div>
-                            <div class="overflow" @click="redirectToMoviePage(array.id, array.banner.title)">
-                                <img class="contain imgBlur" :src="server[slide].banner.img" alt="">
+                            <div class="overflow" @click="redirectToMoviePage(data.id, data.banner.title)">
+                                <img class="contain imgBlur" :src="data.banner.img" alt="">
                             </div>
                             <div class="movie-title">
-                                <div class="title">{{ server[slide].banner.title }}</div>
-                                <div class="text">{{ server[slide].banner.movieType == 'cartoon' ? 'Multfilm' :
-                                    server[slide].banner.movieType }}</div>
+                                <div class="title">{{ data.banner.title }}</div>
+                                <div class="text">{{ data.banner.movieType == 'cartoon' ? 'Multfilm' :
+                                    data.banner.movieType }}</div>
                             </div>
                             <button class="btn imgBtn">ko'ramiz</button>
                         </div>
@@ -109,7 +109,18 @@ let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
 let directLink = ref();
+let banner = ref([])
 
+
+server.forEach((item, index) => {
+    if (item.banner.bannerIsActive) {
+        console.log(index);
+        if (item.banner.bannerIsActive == (index + 1)) {
+            banner.value.push(item);
+        }
+    }
+
+})
 const router = useRouter();
 
 
