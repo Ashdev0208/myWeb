@@ -10,7 +10,7 @@ const server = [
             year: 2021,
             img: 'http://localhost:5173/src/assets/lock.jpg',
             type: ['Horror', 'hayoti', 'fantastika', "mistika"],
-            season: 1, 
+            season: 1,
             partNumber: 10,
             title: "buyuk shaman go do shim",
             movieType: 'serial',
