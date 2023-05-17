@@ -22,8 +22,11 @@ let router = useRouter();
 const searchInput = () => {
 
     if (event.keyCode == 13) {
-        router.push('/search')
+        router.push({ name: 'search' })
+        route().routeName = 'multiSearch'
     }
+
+
 }
 
 window.scrollBy({ top: 0 });
@@ -81,9 +84,5 @@ nav {
 
 .menu {
     cursor: pointer;
-}
-
-.sidebar.active {
-    left: 100%;
 }
 </style>

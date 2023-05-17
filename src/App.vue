@@ -3,7 +3,6 @@
 </script>
 
 <template>
-  <div class="parent">
     <router-view v-slot="{ Component, route }">
       <transition name="slide-fade" mode="out-in" :duration="400">
         <div :key="route.name">
@@ -11,8 +10,6 @@
         </div>
       </transition>
     </router-view>
-
-  </div>
 </template>
 
 

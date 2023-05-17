@@ -25,13 +25,13 @@
                             </div>
                             <div class="movie-title">
                                 <div class="title">{{ server[slide].banner.title }}</div>
-                                <div class="text">{{ server[slide].banner.movieType }}</div>
+                                <div class="text">{{ server[slide].banner.movieType == 'cartoon' ? 'Multfilm' :
+                                    server[slide].banner.movieType }}</div>
                             </div>
                             <button class="btn imgBtn">ko'ramiz</button>
                         </div>
                     </div>
                 </Slide>
-                item.banner.title.replace(/ /g, "-")
                 <template #addons>
                     <Navigation />
                 </template>

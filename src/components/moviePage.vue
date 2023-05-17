@@ -17,7 +17,7 @@
                             >
                         </span>
                         <span class="directory"
-                            @click="router.push({ path: `/lists/${moviePageData[0].banner.movieType}` })">{{
+                            @click="router.push({ name: 'lists', params: { type: moviePageData[0].banner.movieType } }), route().routeName = moviePageData[0].banner.movieType">{{
                                 moviePageData[0].banner.movieType == 'cartoon' ? 'multfilm' : moviePageData[0].banner.movieType
                             }}</span>
                         <span class="text">

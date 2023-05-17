@@ -16,7 +16,7 @@
                         <span class="text">
                             >
                         </span>
-                        <span class="directory">{{ route().routeName == 'cartoon' ? 'multfilm' : route().routeName}}</span>
+                        <span class="directory">multiqidiruv</span>
                         <span class="text">
                             >
                         </span>
@@ -28,7 +28,7 @@
                 </div>
                 <section class="search-item row ai-c js-b">
                     <div v-for="data in searchItemData" class="slideItem rel listCard" :key="data"
-                        @click="redirectToMoviePage(data.id)">
+                        @click="redirectToMoviePage(data.id, data.banner.title)">
                         <div class="part">
                             <div class="season" v-if="data.banner.season
                                 ">{{ data.banner.season }}<br>season</div>
@@ -61,36 +61,36 @@ import sidebar from "./sidebar.vue"
 import Footer from "./footer.vue"
 import datas from "../reusable/index.js"
 import { route } from "../store/store.js";
-import { useRouter } from 'vue-router'
+import { useRouter,useRoute } from 'vue-router'
 let router = useRouter();
 let val = ref(Math.round(Math.random() * datas.length));
 let searchItemData = ref(datas.filter(item => {
     if (route().searchItem !== "") {
-        let fullName = ref(item.banner.title.toLowerCase()); // `item.banner.title` ni kichik harflarga o'zgartiramiz
-        let searchQuery = ref(route().searchItem.toLowerCase()); // `searchItem` ni kichik harflarga o'zgartiramiz
+        let fullName = ref(item.banner.title.toLowerCase());
+        let searchQuery = ref(route().searchItem.toLowerCase());
 
         return fullName.value.includes(searchQuery.value);
-    } // O'xshash ma'lumotlarni filtrlash
+    }
 }));
 watchEffect(() => {
     val.value = Math.round(Math.random() * datas.length);
     searchItemData.value = datas.filter(item => {
         if (route().searchItem !== "") {
-            let fullName = ref(item.banner.title.toLowerCase()); // `item.banner.title` ni kichik harflarga o'zgartiramiz
-            let searchQuery = ref(route().searchItem.toLowerCase()); // `searchItem` ni kichik harflarga o'zgartiramiz
+            let fullName = ref(item.banner.title.toLowerCase());
+
+            let searchQuery = ref(route().searchItem.toLowerCase());
 
             return fullName.value.includes(searchQuery.value);
-        } // O'xshash ma'lumotlarni filtrlash
+        }
     })
 })
 
-function redirectToMoviePage(id) {
+function redirectToMoviePage(id, title) {
+    directLink.value = title.replace(/ /g, "-");
     router.push({
-        path: `/movie/${id}`,
+        path: `/movie/${id}/${directLink.value}`
     });
-    route().searchItem = ""
 }
-
 </script>
 
 <style scoped>
