@@ -8,7 +8,7 @@ const server = [
             description: `18 yoshli Ga Du Sim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz v yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
             Na U Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi`,
             year: 2021,
-            img: 'http://localhost:5173/src/assets/lock.jpg',
+            img: new URL('../assets/movie0.jpg', import.meta.url).href,
             type: ['Horror', 'hayoti', 'fantastika', "mistika"],
             season: 1,
             partNumber: 10,

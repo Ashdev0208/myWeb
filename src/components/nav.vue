@@ -6,7 +6,7 @@
             </div>
             <div class="findMovie">
                 <input type="text" v-model="route().searchItem" @keydown="searchInput()" placeholder="search movie">
-                <button class="icon" style="border: 2px solid red" @click="pushRoute(), iconTrue = true">🔎</button>
+                <button class="icon" @click="pushRoute(), iconTrue = true">🔎</button>
             </div>
             <div class="menu">
                 <div @click="route().modal = true" class="title">Menu</div>
