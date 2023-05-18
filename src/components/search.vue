@@ -16,7 +16,7 @@
                         <span class="text">
                             >
                         </span>
-                        <span class="directory">multiqidiruv</span>
+                        <span class="directory">Multiqidiruv</span>
                         <span class="text">
                             >
                         </span>
@@ -27,8 +27,9 @@
                     <button class="icon">🔎</button>
                 </div>
                 <section class="search-item row ai-c js-b">
-                    <div v-for="data in searchItemData" class="slideItem rel listCard" :key="data"
+                    <div v-for="(data, index) in searchItemData" class="slideItem rel listCard" :key="index"
                         @click="redirectToMoviePage(data.id, data.banner.title)">
+
                         <div class="part">
                             <div class="season" v-if="data.banner.season
                                 ">{{ data.banner.season }}<br>season</div>
@@ -61,8 +62,9 @@ import sidebar from "./sidebar.vue"
 import Footer from "./footer.vue"
 import datas from "../reusable/index.js"
 import { route } from "../store/store.js";
-import { useRouter,useRoute } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 let router = useRouter();
+let directLink = ref();
 let val = ref(Math.round(Math.random() * datas.length));
 let searchItemData = ref(datas.filter(item => {
     if (route().searchItem !== "") {
@@ -85,11 +87,12 @@ watchEffect(() => {
     })
 })
 
+
+
 function redirectToMoviePage(id, title) {
     directLink.value = title.replace(/ /g, "-");
-    router.push({
-        path: `/movie/${id}/${directLink.value}`
-    });
+    router.push({ path: `/movie/${id}/${directLink.value}` })
+    route().searchItem = ""
 }
 </script>
 

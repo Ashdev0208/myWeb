@@ -345,7 +345,8 @@ ul li {
 
   .slideItem.listCard {
     width: 45% !important;
-    margin: 0 auto;
+    margin: 20px auto;
+  
   }
 
 }

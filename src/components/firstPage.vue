@@ -114,10 +114,7 @@ let banner = ref([])
 
 server.forEach((item, index) => {
     if (item.banner.bannerIsActive) {
-        console.log(index);
-        if (item.banner.bannerIsActive == (index + 1)) {
             banner.value.push(item);
-        }
     }
 
 })

@@ -6,7 +6,7 @@
             </div>
             <div class="findMovie">
                 <input type="text" v-model="route().searchItem" @keydown="searchInput()" placeholder="search movie">
-                <button class="icon">🔎</button>
+                <button class="icon" style="border: 2px solid red" @click="pushRoute(), iconTrue = true">🔎</button>
             </div>
             <div class="menu">
                 <div @click="route().modal = true" class="title">Menu</div>
@@ -20,13 +20,14 @@ import { route } from '../store/store';
 import { useRouter } from 'vue-router';
 let router = useRouter();
 const searchInput = () => {
-
     if (event.keyCode == 13) {
         router.push({ name: 'search' })
         route().routeName = 'multiSearch'
     }
-
-
+}
+const pushRoute = () => {
+        router.push({ name: 'search' })
+        route().routeName = 'multiSearch'
 }
 
 window.scrollBy({ top: 0 });
