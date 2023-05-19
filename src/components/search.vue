@@ -48,13 +48,12 @@
 
             </div>
         </div>
-        <div class="bg-blur">
-            <img :src="datas[val].banner.img" alt="">
-        </div>
+        <bgVue></bgVue>
     </div>
 </template>
 
 <script setup>
+import bgVue from './bg.vue'
 import { ref, watchEffect } from 'vue'
 import loading from './loading.vue'
 import Nav from "./nav.vue"
@@ -65,7 +64,6 @@ import { route } from "../store/store.js";
 import { useRouter, useRoute } from 'vue-router'
 let router = useRouter();
 let directLink = ref();
-let val = ref(Math.round(Math.random() * datas.length));
 let searchItemData = ref(datas.filter(item => {
     if (route().searchItem !== "") {
         let fullName = ref(item.banner.title.toLowerCase());
@@ -75,7 +73,6 @@ let searchItemData = ref(datas.filter(item => {
     }
 }));
 watchEffect(() => {
-    val.value = Math.round(Math.random() * datas.length);
     searchItemData.value = datas.filter(item => {
         if (route().searchItem !== "") {
             let fullName = ref(item.banner.title.toLowerCase());

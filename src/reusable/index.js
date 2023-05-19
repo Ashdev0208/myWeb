@@ -1,9 +1,10 @@
 
 const server = [
+
     {
         id: 1,
         banner: {
-            country: "AQSH",
+            country: "janubiy koreya",
             language: "o'zbek",
             description: `18 yoshli Ga Du Sim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz v yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
             Na U Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi`,
@@ -14,7 +15,7 @@ const server = [
             partNumber: 10,
             title: "buyuk shaman go do shim",
             movieType: 'serial',
-            bannerIsActive: 7,
+            bannerIsActive: 5,
             part: [
                 '//ok.ru/videoembed/5940417137229',
                 '//ok.ru/videoembed/5941482424909',
@@ -64,7 +65,7 @@ const server = [
             partNumber: 4,
             title: "Muhlis Xati",
             movieType: 'serial',
-            bannerIsActive: 3,
+            bannerIsActive: 6,
             part: [
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1064661158539',
@@ -85,7 +86,7 @@ const server = [
             type: ['Drama', 'Detiktiv'],
             title: "Qulfdan Chiqarilgan",
             movieType: 'film',
-            bannerIsActive: 4,
+            bannerIsActive: 3,
         }
     },
     {
@@ -99,7 +100,7 @@ const server = [
             src: '//ok.ru/videoembed/5935166786125',
             type: ['Fantastika', 'Drama', 'Musiqiy'],
             title: "Sehrlangan 2",
-            bannerIsActive: 5,
+            bannerIsActive: 4,
             movieType: 'film'
         }
     },
@@ -114,7 +115,7 @@ const server = [
             src: '//ok.ru/videoembed/5934495763021',
             type: ['Drama', 'Komediya'],
             title: "ob havo malikasi",
-            bannerIsActive: 6,
+            bannerIsActive: 1,
             movieType: 'anime',
         }
     },
@@ -133,7 +134,6 @@ const server = [
             partNumber: 8,
             title: "Sening Playlisting",
             movieType: 'serial',
-            bannerIsActive: 1,
             part: [
                 '//ok.ru/videoembed/1914646039083',
                 '//ok.ru/videoembed/1914646039083',

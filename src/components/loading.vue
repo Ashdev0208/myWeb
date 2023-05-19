@@ -1,13 +1,10 @@
 <script setup>
-import { ref } from "vue";
 import { route } from "../store/store";
-fetch('../reusable/index.js')
-
-    .then(response => {
-        setTimeout(() => {
-            route().isLoad = false;
-        }, 200);
-    })
+fetch('../reusable/index.js').then(res => {
+    setTimeout(() => {
+        route().isLoad = false;
+    }, 200);
+})
 
 
 </script>

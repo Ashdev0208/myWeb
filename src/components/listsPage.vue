@@ -53,12 +53,11 @@
 
         </div>
     </div>
-    <div class="bg-blur">
-        <img :src="datas[val].banner.img" alt="">
-    </div>
+    <bgVue></bgVue>
 </template>
 
 <script setup>
+import bgVue from './bg.vue'
 import Paginate from 'vuejs-paginate-next';
 import { route } from "../store/store.js"
 import { ref, watchEffect, computed } from "vue"
@@ -86,16 +85,14 @@ let datasInData = ref(datas.filter(item => {
     }
 }));
 
-let val = ref(Math.round(Math.random() * datas.length))
 watchEffect(() => {
-    val.value = Math.round(Math.random() * datas.length);
     datasInData.value = datas.filter(item => {
         if (item.banner.movieType == route().routeName) {
             return item
         }
     });
 })
-const pageSize = 10;
+const pageSize = 2;
 const currentPage = ref(1);
 
 const paginatedItems = computed(() => {

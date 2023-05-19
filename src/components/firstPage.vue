@@ -87,12 +87,11 @@
 
 
     </div>
-    <div class="bg-blur">
-        <img src="../assets/banner.jpg" alt="">
-    </div>
+    <bgVue></bgVue>
 </template>
 
 <script setup>
+import bgVue from './bg.vue'
 import { ref } from "vue"
 import { useRouter } from "vue-router";
 import server from '../reusable/index.js';
@@ -109,15 +108,25 @@ let serial = ref([]);
 let film = ref([]);
 let cartoon = ref([]);
 let directLink = ref();
-let banner = ref([])
-
-
-server.forEach((item, index) => {
-    if (item.banner.bannerIsActive) {
-        banner.value.push(item);
-    }
-
+let banner = ref(server.filter(item => item.banner.bannerIsActive));
+console.log(banner.value);
+console.log(server);
+banner.value.sort((a, b) => {
+    return a.banner.bannerIsActive - b.banner.bannerIsActive
 })
+// let bannerCounter = ref(server.filter(item => {
+//     return item.banner.bannerIsActive
+// }));
+// let cloneBanner = ref(bannerCounter.value.map(item => { return item }))
+// console.log(cloneBanner.value);
+
+// bannerCounter.value.forEach((item, i, arr) => {
+//     banner.value.push(cloneBanner.value[item.banner.bannerIsActive])
+// });
+
+// console.log(banner.value);
+
+
 const router = useRouter();
 
 
@@ -133,7 +142,7 @@ function redirectToMoviePage(id, title) {
 
 let num = (num) => {
     if (num >= 4) {
-        return 4
+        return 3
     } else if (num >= 3) {
 
     }

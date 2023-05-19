@@ -21,21 +21,20 @@ import { route } from '../store/store';
 import { useRouter } from 'vue-router';
 import loading from './loading.vue'
 let router = useRouter();
-const searchInput = () => {
-    if (event.keyCode == 13) {
-        route().isLoad = true;
-        setTimeout(() => {
-            router.push({ name: 'search' })
-        }, 300);
-        route().routeName = 'multiSearch'
-    }
-}
-const pushRoute = () => {
+function cloneCode() {
     route().isLoad = true;
     setTimeout(() => {
         router.push({ name: 'search' })
     }, 300);
     route().routeName = 'multiSearch'
+}
+const searchInput = () => {
+    if (event.keyCode == 13) {
+        cloneCode()
+    }
+}
+const pushRoute = () => {
+    cloneCode()
 }
 
 window.scrollBy({ top: 0 });
