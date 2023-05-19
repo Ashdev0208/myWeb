@@ -1,5 +1,6 @@
 <template>
     <div>
+        <loading></loading>
         <nav class="row ai-c js-b">
             <div class="logo">
                 <routerLink to="/">Aems Studios</routerLink>
@@ -18,16 +19,23 @@
 <script setup>
 import { route } from '../store/store';
 import { useRouter } from 'vue-router';
+import loading from './loading.vue'
 let router = useRouter();
 const searchInput = () => {
     if (event.keyCode == 13) {
-        router.push({ name: 'search' })
+        route().isLoad = true;
+        setTimeout(() => {
+            router.push({ name: 'search' })
+        }, 300);
         route().routeName = 'multiSearch'
     }
 }
 const pushRoute = () => {
+    route().isLoad = true;
+    setTimeout(() => {
         router.push({ name: 'search' })
-        route().routeName = 'multiSearch'
+    }, 300);
+    route().routeName = 'multiSearch'
 }
 
 window.scrollBy({ top: 0 });

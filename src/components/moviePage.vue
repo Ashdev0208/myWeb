@@ -47,7 +47,7 @@
                         </div>
                         <br><br>
                         <div class="row">
-                            <div class="title" style="font-weight: 400;margin-bottom: 10px;">film haqida qisqacha malumot:
+                            <div class="title" style="font-weight: 400;margin-bottom: 10px;">Film haqida qisqacha malumot:
                             </div>
                             <div class="text">
                                 {{ moviePageData[0].banner.description }}
@@ -55,7 +55,7 @@
                         </div>
                     </div>
                 </section>
-                <div style="margin-top: 50px;">
+                <div style="margin-top: 50px;" class="movieTitle">
                     <iframe v-if="isOpen" width="100%" height="500"
                         :src="source == '' ? moviePageData[0].banner.src : source" frameborder="0"
                         style="border-radius: 10px" allowfullscreen>

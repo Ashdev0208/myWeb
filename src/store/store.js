@@ -7,7 +7,8 @@ export const route = defineStore("writeRoute", {
         return {
             routeName: useRoute().params.type,
             modal: false,
-            searchItem:""
+            searchItem:"",
+            isLoad: true,
         }
     }
 })

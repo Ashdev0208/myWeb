@@ -1,4 +1,5 @@
 <template>
+    <loading></loading>
     <div class="row">
         <div class="side">
             <sidebar></sidebar>
@@ -17,7 +18,7 @@
                         <span class="text">
                             >
                         </span>
-                        <span class="directory">{{ route().routeName == 'cartoon' ? 'multfilm' : route().routeName}}</span>
+                        <span class="directory">{{ route().routeName == 'cartoon' ? 'multfilm' : route().routeName }}</span>
                         <span class="text">
                             >
                         </span>
@@ -31,8 +32,8 @@
                 <div v-for="(data, index) in paginatedItems" class="slideItem rel listCard" :key="index"
                     @click="redirectToMoviePage(data.id, data.banner.title)">
                     <div class="part">
-                        <div class="season">{{ data.banner.season }}<br>season</div>
-                        <div class="part-number">{{ data.banner.partNumber }}<br>seriya</div>
+                        <div class="season" v-if="data.banner.season">{{ data.banner.season }}<br>season</div>
+                        <div class="part-number" v-if="data.banner.partNumber">{{ data.banner.partNumber }}<br>seriya</div>
                     </div>
                     <div class="img overflow "><img class="contain imgBlur" :src="data.banner.img" alt=""></div>
                     <div class="title">{{ data.banner.title }}</div>
@@ -63,16 +64,20 @@ import { route } from "../store/store.js"
 import { ref, watchEffect, computed } from "vue"
 import { useRouter } from "vue-router";
 import datas from '../reusable/index.js';
+import loading from './loading.vue'
 import Nav from "./nav.vue"
 import sidebar from './sidebar.vue'
 import Footer from './footer.vue'
 let directLink = ref();
 const router = useRouter();
 function redirectToMoviePage(id, title) {
+    route().isLoad = true;
     directLink.value = title.replace(/ /g, "-");
-    router.push({
-        path: `/movie/${id}/${directLink.value}`
-    });
+    setTimeout(() => {
+        router.push({
+            path: `/movie/${id}/${directLink.value}`
+        });
+    }, 300);
 }
 
 let datasInData = ref(datas.filter(item => {

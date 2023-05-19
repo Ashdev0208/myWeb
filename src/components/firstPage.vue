@@ -114,7 +114,7 @@ let banner = ref([])
 
 server.forEach((item, index) => {
     if (item.banner.bannerIsActive) {
-            banner.value.push(item);
+        banner.value.push(item);
     }
 
 })
@@ -122,10 +122,13 @@ const router = useRouter();
 
 
 function redirectToMoviePage(id, title) {
+    route().isLoad = true;
     directLink.value = title.replace(/ /g, "-");
-    router.push({
-        path: `/movie/${id}/${directLink.value}`
-    });
+    setTimeout(() => {
+        router.push({
+            path: `/movie/${id}/${directLink.value}`
+        });
+    }, 300);
 }
 
 let num = (num) => {

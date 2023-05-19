@@ -86,13 +86,14 @@ watchEffect(() => {
         }
     })
 })
-
-
-
 function redirectToMoviePage(id, title) {
+    route().isLoad = true;
     directLink.value = title.replace(/ /g, "-");
-    router.push({ path: `/movie/${id}/${directLink.value}` })
-    route().searchItem = ""
+    setTimeout(() => {
+        router.push({
+            path: `/movie/${id}/${directLink.value}`
+        });
+    }, 300);
 }
 </script>
 

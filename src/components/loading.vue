@@ -1,15 +1,19 @@
 <script setup>
-import { ref, onMounted } from "vue"
-let isLoad = ref(true);
-onMounted(() => {
-    setTimeout(() => {
-        isLoad.value = false;
-    }, 500);
-})
+import { ref } from "vue";
+import { route } from "../store/store";
+fetch('../reusable/index.js')
+
+    .then(response => {
+        setTimeout(() => {
+            route().isLoad = false;
+        }, 200);
+    })
+
+
 </script>
 
 <template>
-    <div v-show="isLoad" class="loader">
+    <div v-show="route().isLoad" class="loader">
         <div class="spinner"></div>
         <div class="text">Aems Studios</div>
     </div>
@@ -51,7 +55,7 @@ onMounted(() => {
     margin-left: 10px;
     font-size: 34px;
     font-weight: bold;
-    font-family: "heavy",sans-serif;
+    font-family: "heavy", sans-serif;
     color: transparent;
     -webkit-text-stroke: 2px #fff;
 }

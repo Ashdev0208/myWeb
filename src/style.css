@@ -208,6 +208,7 @@ ul li {
 
 .movie-title {
   text-align: left;
+  text-transform: capitalize;
 }
 
 .page-item a,
@@ -298,6 +299,7 @@ ul li {
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
+  text-transform: capitalize;
 }
 
 .movieInfo .col-6:hover {
@@ -361,12 +363,16 @@ ul li {
   }
 
   .container {
+    width: 78%;
     margin: 0;
     margin-left: 20%;
   }
 
   .sidebar {
     width: 19% !important;
+  }
+  .directory {
+    font-size: 12px;
   }
 }
 
@@ -416,5 +422,7 @@ ul li {
   .slideItem.listCard {
     width: 70% !important;
   }
-
+  .movieTitle .title{
+    font-size: 13px ;
+  }
 }
