@@ -28,7 +28,7 @@
                     Aems Studios
                 </div>
             </div>
-            <section class="content row ai-c js-b">
+            <section class="content row js-b">
                 <div v-for="(data, index) in paginatedItems" class="slideItem rel listCard" :key="index"
                     @click="redirectToMoviePage(data.id, data.banner.title)">
                     <div class="part">
@@ -92,7 +92,7 @@ watchEffect(() => {
         }
     });
 })
-const pageSize = 2;
+const pageSize = 10;
 const currentPage = ref(1);
 
 const paginatedItems = computed(() => {

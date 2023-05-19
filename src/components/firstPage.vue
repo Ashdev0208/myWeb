@@ -1,5 +1,6 @@
 <template>
     <loading></loading>
+    <bgVue></bgVue>
     <div class="row">
         <div class="side">
             <sidebar></sidebar>
@@ -66,7 +67,7 @@
                         </div>
 
                     </Slide>
-                    <Slide :key="id">
+                    <Slide :key="id" @click='allWatch(id)'>
                         <div class="carousel__item allMovies">
                             <div class="slideItem rel ">
                                 <div class="title">Barchasini ko'rish <br>
@@ -87,7 +88,6 @@
 
 
     </div>
-    <bgVue></bgVue>
 </template>
 
 <script setup>
@@ -114,21 +114,19 @@ console.log(server);
 banner.value.sort((a, b) => {
     return a.banner.bannerIsActive - b.banner.bannerIsActive
 })
-// let bannerCounter = ref(server.filter(item => {
-//     return item.banner.bannerIsActive
-// }));
-// let cloneBanner = ref(bannerCounter.value.map(item => { return item }))
-// console.log(cloneBanner.value);
-
-// bannerCounter.value.forEach((item, i, arr) => {
-//     banner.value.push(cloneBanner.value[item.banner.bannerIsActive])
-// });
-
-// console.log(banner.value);
-
 
 const router = useRouter();
-
+const listsData = ref(['serial', 'film', 'anime', 'cartoon'])
+const allWatch = (id) => {
+    route().isLoad = true;
+    route().routeName = listsData.value[id]
+    setTimeout(() => {
+        router.push({
+            path: `/lists/${listsData.value[id]}`,
+            params: { type: 'anime' }
+        });
+    }, 300);
+}
 
 function redirectToMoviePage(id, title) {
     route().isLoad = true;

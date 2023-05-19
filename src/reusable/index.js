@@ -15,7 +15,7 @@ const server = [
             partNumber: 10,
             title: "buyuk shaman go do shim",
             movieType: 'serial',
-            bannerIsActive: 5,
+            bannerIsActive: 1,
             part: [
                 '//ok.ru/videoembed/5940417137229',
                 '//ok.ru/videoembed/5941482424909',
@@ -115,7 +115,7 @@ const server = [
             src: '//ok.ru/videoembed/5934495763021',
             type: ['Drama', 'Komediya'],
             title: "ob havo malikasi",
-            bannerIsActive: 1,
+            bannerIsActive: 5,
             movieType: 'anime',
         }
     },
