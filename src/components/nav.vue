@@ -10,7 +10,7 @@
                 <button class="icon" @click="pushRoute(), iconTrue = true">🔎</button>
             </div>
             <div class="menu">
-                <div @click="route().modal = true" class="title">Menu</div>
+                <div @click="route().modal = true" class="title"><img src="../assets/menu.svg" alt=""></div>
             </div>
         </nav>
     </div>
