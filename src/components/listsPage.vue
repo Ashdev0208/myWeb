@@ -29,16 +29,17 @@
                 </div>
             </div>
             <section class="content row js-b">
-                <div v-for="(data, index) in paginatedItems" class="slideItem rel listCard" :key="index"
+                <div v-for="(data, index) in  paginatedItems " class="slideItem rel listCard" :key="index"
                     @click="redirectToMoviePage(data.id, data.banner.title)">
-                    <div class="part">
-                        <div class="season" v-if="data.banner.season">{{ data.banner.season }}<br>season</div>
-                        <div class="part-number" v-if="data.banner.partNumber">{{ data.banner.partNumber }}<br>seriya</div>
+                    <div class="part" v-if="data.banner.partNumber">
+                        <div class="season">{{ data.banner.season }}<br>season</div>
+                        <div class="part-number">{{ data.banner.partNumber }}<br>seriya </div>
+                                </div>
+                                    <div class=" img overflow "><img class=" contain imgBlur" :src="data.banner.img"
+                                            alt=""></div>
+                        <div class="title">{{ data.banner.title }}</div>
+                        <button class="btn imgBtn">ko'ramiz</button>
                     </div>
-                    <div class="img overflow "><img class="contain imgBlur" :src="data.banner.img" alt=""></div>
-                    <div class="title">{{ data.banner.title }}</div>
-                    <button class="btn imgBtn">ko'ramiz</button>
-                </div>
             </section>
             <br><br>
             <paginate :page-count="pageCounter" :container-class="'pagination'" :prev-text="'<'" :next-text="'>'"
