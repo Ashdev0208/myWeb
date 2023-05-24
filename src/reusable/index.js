@@ -112,7 +112,7 @@ const server = [
             description: `Oʻrta maktab oʻquvchisi Xodaka Morishima uzoq oroldan Tokioga koʻchib oʻtadi va u yerda darhol qiyinchiliklarga duch keladi. U shaharda tanho hayot kechiradi, lekin sariq matbuotga gʼayritabiiy narsalar haqida maqolalar sotadigan agentlikda yozuvchi boʻlib ishga kirishga muvaffaq boʻladi. Poytaxtga kelganidan beri har kuni yomgʻir yogʻmoqda.U Xina Amano ismli qizni uchratadi. Muayyan sharoitlarga koʻra, Xina quvnoq va kuchli boʻlsa-da, ukasi bilan yashaydi. Boshqa narsalar qatorida, u bitta ajoyib qobiliyatga ega: u yomgʻirni toʻxtata oladi va bulutlarni tarqatadi....`,
             year: 2021,
             img: new URL('../assets/wheatherPrince.jpg', import.meta.url).href,
-            src: '//ok.ru/videoembed/5934495763021',
+            src: '//ok.ru/videoembed/5350838962826',
             type: ['Drama', 'Komediya'],
             title: "ob havo malikasi",
             bannerIsActive: 5,
