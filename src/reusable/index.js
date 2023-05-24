@@ -4,16 +4,16 @@ const server = [
     {
         id: 1,
         banner: {
-            country: "janubiy koreya",
-            language: "o'zbek",
-            description: `18 yoshli Ga Du Sim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz v yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
-            Na U Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi`,
+            country: "Janubiy koreya",
+            language: "O'zbek",
+            description: `18 yoshli Ga Du Shim oddiy maktab o'quvchisi kabi yashashni xohlaydi, lekin u yovuz ruhlar bilan kurashadigan shaman bo'lish taqdiri bilan tug'ilgan. U jasur va kuchli qiz va yovuz ruhlarga qarshi kurashadi, sirli hodisalarni hal qiladi.
+            Na Vu Su badavlat oilaning katta maktab o'quvchisi, kelishgan va a'lo baholarga o'qiydi. Ga Du Shim hayotida to'satdan paydo bo'lganda, u yovuz ruhlarni ko'rish qobiliyatiga ega bo'ladi.Shundan so'ng ular birgalikda yovuz ruxlarga qarshi kurasha boshlashadi,
             year: 2021,
             img: new URL('../assets/movie0.jpg', import.meta.url).href,
-            type: ['Horror', 'hayoti', 'fantastika', "mistika"],
+            type: ['Horror', 'Drama', 'Fantastika', "Mistika"],
             season: 1,
             partNumber: 10,
-            title: "buyuk shaman go do shim",
+            title: "Buyuk Shaman Go Do Shim",
             movieType: 'serial',
             bannerIsActive: 1,
             part: [
@@ -35,14 +35,14 @@ const server = [
         id: 2,
         banner: {
             country: "Janubiy Koreya ",
-            language: "o'zbek",
-            description: `Gong Changyoung yangi maktabga transfer qiladi va u yerda Yoo Ha Young ismli qizni yoqtirib qoladi.ChangYoung do'stlari musiqiy jamoa azosi va uni ham qo'shishadi.Changyoung pioninachi bo'lib juda qobilyatli bo'ladi...`,
+            language: "O'zbek",
+            description: `Kambag'al oilada o'sgan uchta opa-singil haqida hikoya.  Ular jiddiy voqeaga aralashib, mamlakatdagi eng boy va qudratli oilaga duch kelishadi....`,
             year: 2022,
             img: 'https://i.mycdn.me/i?r=AyH4iRPQ2q0otWIFepML2LxRStIXfrwyv6EQNYMLtdl-Nw&dpr=2',
             src: '//ok.ru/videoembed/5936314649165',
-            type: ['detektiv', 'drama', 'drama'],
+            type: ['Detektiv', 'Drama',],
             season: 1,
-            partNumber: 2,
+            partNumber: 1,
             title: "Kichik Xonimlar",
             movieType: 'serial',
             bannerIsActive: 2,
