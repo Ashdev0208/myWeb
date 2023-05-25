@@ -242,6 +242,21 @@ const server = [
             ]
         }
     },
+        {
+        id:13,
+            banner: {
+                country:"AQSH",
+                    language: "o'zbek",
+                        description: "wergjkwebrgjqwbergqwhebrguwbehrwuehrb2ebewr",
+                            year: 2012,
+                                img: "https://yandex.ru/images/search?pos=1&from=tabbar&img_url=https%3A%2F%2Fsun9-78.userapi.com%2Fimpf%2F3H3ZefkjhLoYiazLoKbNZjdDTwMzkJaEpj3A1w%2FjTP1kTtz1Aw.jpg%3Fsize%3D604x453%26quality%3D96%26sign%3D4afa7422e2a7aba0f76fbde7daf291db%26c_uniq_tag%3D1eNw9vpSh5m2Ro40kpnQXvZuPOxMR0I7Oadx23pUXkU%26type%3Dalbum&text=cat&rpt=simage&lr=10335",
+                                   src: "//ok.ru/video/5028913154698" ,
+                                       type: ['droam','jangari'],
+                                           title: "thor",
+                                            movieType: "cartoon",
+                        
+            }
+        }
 
 ]
 
