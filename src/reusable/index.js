@@ -242,6 +242,28 @@ const server = [
             ]
         }
     },
+        {
+        id: 13,
+        banner: {
+            country: "janubiy koreya",
+            language: "o'zbek",
+            description: `Do Bong-soon g'ayritabiiy kuch bilan tug'ilgan. Uning kuchi meros bo'lib, faqat uning oilasidagi ayollarga o'tadi. Uning orzusi - o'zi bosh qahramon sifatida video o'yin yaratish. U nazokatli va nafis ayol bo'lishni juda xohlaydi, bu uning sevgilisi In Guk Du, politsiyachi. Uning kuchi tufayli u boy merosxo'r An Min Xyukning, Ainsoft o'yin kompaniyasining bosh direktori qo'riqchisi sifatida ishga joylashadi. Bong yaqinda yashaydigan Dobong-dong tumanida bir qator odam o'g'irlash holatlari sodir bo'ladi va u eng yaxshi do'stini nishonga olgan jinoyatchini qo'lga olishga qaror qiladi.‌..`,
+            year: 2021,
+            img: new URL('../assets/movie2.jpg', import.meta.url).href,
+            src: '//ok.ru/videoembed/5936347810381',
+            type: ['Komediay', 'Drama', 'Romantik'],
+            title: "kuchli qiz do bong soon",
+            season: 1,
+            partNumber: 3,
+            movieType: 'serial',
+            part: [
+                '//ok.ru/videoembed/5940409600589',
+                '//ok.ru/videoembed/5942447508045',
+                '//ok.ru/videoembed/5942514223693',
+                '//ok.ru/videoembed/5942539455053'
+            ]
+        }
+    },
 
 ]
 
